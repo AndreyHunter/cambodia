@@ -1,0 +1,34 @@
+.root {
+	flex-direction: column;
+	gap: 6px;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 5px;
+	padding-right: 0;
+
+	.line {
+		display: block;
+		width: 28px;
+		height: 2px;
+		background-color: #fff;
+		transition:
+			transform 0.2s ease,
+			opacity 0.2s ease;
+	}
+
+	&.active {
+		.line {
+			&:nth-child(1) {
+				transform: translateY(8px) rotate(45deg);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+				transform: translateX(10px);
+			}
+			&:nth-child(3) {
+				transform: translateY(-8px) rotate(-45deg);
+			}
+		}
+	}
+}
