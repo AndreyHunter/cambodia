@@ -1,0 +1,19 @@
+.list {
+	display: flex;
+	gap: 35px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li a {
+		color: #ffffff;
+		font-size: 16px;
+		text-decoration: none;
+		white-space: nowrap;
+		transition: opacity 0.2s;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}

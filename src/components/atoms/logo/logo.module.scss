@@ -1,0 +1,35 @@
+.logo {
+	color: #ffffff;
+	display: inline-block;
+
+	&Text {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&Main {
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&SubWrapper {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+	}
+
+	&Sub {
+		font-size: 0.75rem;
+		letter-spacing: 0.0625rem;
+		text-transform: lowercase;
+	}
+}
+
+.line {
+	height: 1px;
+	background-color: #ffffff;
+	flex-grow: 1;
+	min-width: 3.125rem;
+}
