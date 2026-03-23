@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
-import { HeaderNav } from '../header-nav/Header-nav';
-import { Container } from '../../helpers/container/Container';
-import { Logo } from '../../atoms/logo/Logo';
+import { HeaderNav } from '@components/organisms/header-nav/Header-nav';
+import { Container } from '@components/helpers/container/Container';
+import { Logo } from '@components/atoms/logo/Logo';
 
 interface HeaderProps {
 	className?: string;
