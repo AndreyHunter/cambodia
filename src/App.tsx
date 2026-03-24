@@ -1,8 +1,11 @@
-import './App.scss';
-import Header from '@components/organisms/Header/Header';
+import { Header } from '@/components/organisms/header/Header';
+import { HeroSection } from '@components/organisms/hero-section/HeroSection';
 
-function App() {
-	return <Header />;
+export function App() {
+	return (
+		<>
+			<Header />
+			<HeroSection />
+		</>
+	);
 }
-
-export default App;

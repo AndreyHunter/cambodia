@@ -1,0 +1,277 @@
+.root {
+    width: 100%;
+    height: 1024px;
+    max-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    background-color: #0b0b0b;
+    color: #fff;
+
+    @media (max-width: 1440px) {
+        height: 100vh;
+        min-height: 700px;
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slideContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.leftColumn {
+    flex: 0 0 65%;
+    height: 100%;
+    position: relative;
+    background-color: #111;
+
+    @media (max-width: 1024px) {
+        flex: 0 0 100%;
+    }
+
+    .bgImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.leftOverlayItems {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    > * {
+        pointer-events: auto;
+    }
+
+    .langSwitch {
+        position: absolute;
+        left: 0;
+        bottom: 136px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        font-weight: 300;
+
+        .langLine {
+            display: inline-block;
+            width: 116px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.4);
+            margin-right: 20px;
+
+            @media (max-width: 1440px) {
+                width: 90px;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            display: none;
+        }
+    }
+
+    .controlsWrapper {
+        position: absolute;
+        left: 50%;
+        bottom: 135px;
+        transform: translateX(-50%);
+
+        @media (max-width: 1024px) {
+            bottom: 200px;
+        }
+    }
+}
+
+.staticUI {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+
+    > * {
+        pointer-events: auto;
+    }
+}
+
+.staticLeft {
+    flex: 0 0 65%;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 1024px) {
+        flex: 0 0 100%;
+    }
+}
+
+.staticRight {
+    flex: 0 0 35%;
+    position: relative;
+    height: 100%;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.rightColumn {
+    flex: 0 0 35%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 120px;
+    padding-left: 80px;
+    padding-right: 80px;
+    z-index: 2;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    .bgImg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .darkOverlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 2;
+    }
+
+    .descriptionBox {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: #ffffff;
+        max-width: 320px;
+    }
+
+    .slideNumber {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 0;
+    }
+
+    .descriptionText {
+        font-size: 16px;
+        line-height: 1.6;
+        font-weight: 300;
+        opacity: 0.8;
+        white-space: pre-line;
+        margin: 0;
+    }
+}
+
+.discoverButtonWrapper {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    @media (max-width: 1440px) {
+        top: 150px;
+    }
+
+    @media (max-width: 1280px) {
+        top: 100px;
+    }
+}
+
+.centerTextWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 154%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+    padding-top: 190px;
+
+    @media (max-width: 1440px) {
+        padding-top: 120px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 80px;
+    }
+}
+
+.titleBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    @media (max-width: 478px) {
+        gap: 30px;
+    }
+}
+
+.mainTitle,
+.outlineTitle {
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+.mainTitle {
+    font-size: clamp(64px, 12vw, 180px);
+    margin-left: 160px;
+    color: #fff;
+
+    @media (max-width: 1440px) {
+        margin-left: 80px;
+    }
+    @media (max-width: 768px) {
+        margin-left: 20px;
+    }
+}
+
+.outlineTitle {
+    font-size: clamp(56px, 12vw, 180px);
+    margin-left: 545px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    z-index: 9;
+
+    @media (max-width: 1600px) {
+        margin-left: 300px;
+    }
+
+    @media (max-width: 1440px) {
+        margin-left: 250px;
+    }
+    @media (max-width: 768px) {
+        margin-left: 60px;
+    }
+}

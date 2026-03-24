@@ -1,11 +1,15 @@
-import styles from './container.module.scss';
 import type { ReactNode } from 'react';
+import clsx from 'clsx';
 
-interface Container {
+import styles from './container.module.scss';
+
+interface ContainerProps {
 	children: ReactNode;
 	className?: string;
 }
 
-export const Container = ({ children, className }: Container) => {
-	return <div className={`${styles.root} ${className}`}>{children}</div>;
+export const Container = ({ children, className }: ContainerProps) => {
+	const classes = clsx(styles.root, className);
+
+	return <div className={classes}>{children}</div>;
 };

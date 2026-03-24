@@ -1,29 +1,31 @@
+import { Link } from 'react-router-dom';
+
 import styles from './header-nav.module.scss';
 
 export const HeaderNav = () => {
 	return (
-		<nav className={styles.root}>
+		<nav>
 			<ul className={styles.list}>
 				<li>
-					<a href="/">Home page</a>
+					<Link to="/">Home page</Link>
 				</li>
 				<li>
-					<a href="/about">About us</a>
+					<Link to="/about">About us</Link>
 				</li>
 				<li>
-					<a href="/services">Services</a>
+					<Link to="/services">Services</Link>
 				</li>
 				<li>
-					<a href="/projects">Projects</a>
+					<Link to="/projects">Projects</Link>
 				</li>
 				<li>
-					<a href="/career">Career</a>
+					<Link to="/career">Career</Link>
 				</li>
 				<li>
-					<a href="/blog">Blog</a>
+					<Link to="/blog">Blog</Link>
 				</li>
 				<li>
-					<a href="/contacts">Contacts</a>
+					<Link to="/contacts">Contacts</Link>
 				</li>
 			</ul>
 		</nav>

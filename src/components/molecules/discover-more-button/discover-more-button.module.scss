@@ -1,0 +1,39 @@
+.root {
+	display: inline-block;
+}
+
+.discoverCircle {
+	width: 168px;
+	height: 168px;
+	border: 1px solid rgba(255, 255, 255, 1);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: var(--main-transition);
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+}
+
+.contentWrapper {
+	transform: rotate(-45deg);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 4px;
+}
+
+.discoverText {
+	color: #ffffff;
+	font-size: 15px;
+	letter-spacing: 0.05em;
+	font-weight: 300;
+}
+
+.arrowLine {
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+}

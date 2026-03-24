@@ -1,5 +1,5 @@
-.logo {
-	color: #ffffff;
+.root {
+	color: #fff;
 	display: inline-block;
 
 	&Text {
@@ -14,7 +14,7 @@
 		line-height: 1;
 	}
 
-	&SubWrapper {
+	&SubWrapper {		
 		display: flex;
 		align-items: center;
 		gap: 3px;

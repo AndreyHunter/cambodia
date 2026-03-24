@@ -1,19 +1,25 @@
+import { Link } from 'react-router-dom';
+
+import clsx from 'clsx';
+
 import styles from './logo.module.scss';
 
-interface Logo {
+interface LogoProps {
 	className?: string;
 }
 
-export const Logo = ({ className }: Logo) => {
+export const Logo = ({ className }: LogoProps) => {
+	const classes = clsx(styles.root, className);
+
 	return (
-		<a href="/" className={`${styles.logo} ${className}`}>
-			<div className={styles.logoText}>
-				<span className={styles.logoMain}>Cambodia</span>
-				<div className={styles.logoSubWrapper}>
-					<span className={styles.logoSub}>interior</span>
+		<Link to="/" className={classes}>
+			<div className={styles.text}>
+				<span className={styles.rootMain}>Cambodia</span>
+				<div className={styles.rootSubWrapper}>
+					<span className={styles.rootSub}>interior</span>
 					<div className={styles.line}></div>
 				</div>
 			</div>
-		</a>
+		</Link>
 	);
 };
