@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 import { HeaderNav } from '@components/organisms/header-nav/Header-nav';
+import { MobileMenu } from '@components/organisms/mobile-menu/MobileMenu';
 import { Container } from '@components/helpers/container/Container';
 import { Logo } from '@components/atoms/logo/Logo';
 import { Burger } from '@components/atoms/burger/Burger';
@@ -16,6 +17,7 @@ interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const closeMenu = () => setIsMenuOpen(false);
     const classes = clsx(styles.root, className);
 
     return (
@@ -40,6 +42,7 @@ export const Header = ({ className }: HeaderProps) => {
                     </div>
                 </div>
             </Container>
+            <MobileMenu isOpen={isMenuOpen} onClose={closeMenu} />
         </header>
     );
 };
